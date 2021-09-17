@@ -34,6 +34,14 @@ To install the required software, run the following commands:
 3. apt-get install python3-pip
 4. pip3 install freegames
 
+#  TC1001S.100 Herramientas Computacionales: el Arte de la Programación
+
+## Equipo 10
+- Brenda Quintanilla
+- Emilio Sibaja Villareal
+- Enrique Cabrera Aguilar
+
+
 ## Changes by Emilio
 
 ###### Snake
@@ -51,12 +59,16 @@ To install the required software, run the following commands:
 ## Changes by Brenda
 
 ###### Snake
-
+- “You are dead” displayed on terminal at the end of the game 
 
 ###### Cannon
+- Increased speed of the ball that shoots
+- Increased size of the shooting ball
+- Color change of the shooting ball from green to magenta
 
-
-###### Pacman
+###### Memory
+- Color change of the line from black to cyan
+- Color change of squares from white to orange
 
 
 ## Changes by Enrique
