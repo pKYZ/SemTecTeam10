@@ -13,6 +13,8 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 
+state = {'score': 0}
+writer = Turtle(visible=False)
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
@@ -27,33 +29,38 @@ def inside(head):
    return -200 < head.x < 190 and -200 < head.y < 190
 
 def move():
-   "Move snake forward one segment."
-   head = snake[-1].copy()
-   head.move(aim)
+    "Move snake forward one segment."
+    writer.undo()
+    writer.write(state['score'],font=("Calibri", 8, "bold"))
+    clear()
+    head = snake[-1].copy()
+    head.move(aim)
 
-   if not inside(head) or head in snake:
+    if not inside(head) or head in snake:
        square(head.x, head.y, 9, 'red')
        print('You are dead :(')
        update()
        return
 
-   snake.append(head)
+    snake.append(head)
 
-   if head == food:
+    if head == food:
        print('Snake:', len(snake))
        food.x = randrange(-15, 15) * 10
        food.y = randrange(-15, 15) * 10
-   else:
+       state['score'] += 1
+
+    else:
        snake.pop(0)
 
-   clear()
+    clear()
 
-   for body in snake:
+    for body in snake:
        square(body.x, body.y,10, 'green')
 
-   square(food.x,food.y,10, 'purple')
-   update()
-   ontimer(move, 100)
+    square(food.x,food.y,10, 'purple')  
+    update()
+    ontimer(move, 100)
 
 setup(500, 500, 370, 0)
 
@@ -123,6 +130,9 @@ for i in range(25):
 right(-60)
 hideturtle()
 tracer(False)
+
+writer.color('black')
+writer.write(state['score'])
 listen()
 onkey(lambda: change(10, 0), 'Right')
 onkey(lambda: change(-10, 0), 'Left')
