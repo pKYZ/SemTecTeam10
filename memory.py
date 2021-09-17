@@ -160,4 +160,3 @@ elif opt==2:
     onscreenclick(tap)
     draw()
     done()
-    #No encontré forma de reacomodar los cuadrados ni la pantalla ni la imagen
