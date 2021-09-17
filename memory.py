@@ -24,7 +24,7 @@ if opt==1:
     hide = [True] * 64
     def square(x, y):
         "Draw white square with black outline at (x, y)."
-        "Note: Later changed to orange"
+        "Note: Later changed to orange with cyan outlines"
         up()
         goto(x, y)
         down()
@@ -92,9 +92,9 @@ elif opt==2:
     print("     You chose gamemode 4x4\n")
 
     car = path('car.gif')
-    tiles= list(range(2))*2
+    tiles= list(range(8))*2
     state= {'mark':None}
-    hide= [True] * 4
+    hide= [True] * 16
     def square(x, y):
         "Draw white square with black outline at (x, y)."
         "Note: Later changed to orange"
@@ -104,17 +104,17 @@ elif opt==2:
         color('cyan', 'magenta')
         begin_fill()
         for count in range(4):
-            forward(50)
+            forward(100)
             left(90)
         end_fill()
 
     def index(x, y):
         "Convert (x, y) coordinates to tiles index."
-        return int((x + 200) // 50 + ((y + 200) // 50) * 4)
+        return int((x + 200) // 100 + ((y + 200) // 100) * 4)
 
     def xy(count):
         "Convert tiles count to (x, y) coordinates."
-        return (count % 4) * 50 - 200, (count // 4) * 50 - 200
+        return (count % 4) * 100 - 200, (count // 4) * 100 - 200
 
     def tap(x, y):
         "Update mark and hidden tiles based on tap."
@@ -135,7 +135,7 @@ elif opt==2:
         shape(car)
         stamp()
 
-        for count in range(4):
+        for count in range(16):
             if hide[count]:
                 x, y = xy(count)
                 square(x, y)
