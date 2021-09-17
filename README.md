@@ -42,7 +42,7 @@
 
 
 ###### Cannon
-
+- Show score of hits
 
 ###### Pacman
 
