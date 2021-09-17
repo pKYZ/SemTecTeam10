@@ -33,6 +33,7 @@ def move():
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
+        print('You are dead :(')
         update()
         return
 
