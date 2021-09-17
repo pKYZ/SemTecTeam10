@@ -33,3 +33,39 @@ To install the required software, run the following commands:
 2. apt-get install python3-tkinter
 3. apt-get install python3-pip
 4. pip3 install freegames
+
+## Changes by Emilio
+
+###### Snake
+- Changed the colour of the snake and the food to green and purple
+- Before the game starts, it prints a "hello" to the player
+- Changed the look of the snake and the food by turning them -60° to the right
+
+###### Cannon
+- Made more targets to appear randomly in less time
+
+###### Pacman
+- Made the ghost and pacman faster. Ghosts go with a velocity of 12 and pacman with 10.
+
+
+## Changes by Brenda
+
+###### Snake
+
+
+###### Cannon
+
+
+###### Pacman
+
+
+## Changes by Enrique
+
+###### Snake
+
+
+###### Cannon
+
+
+###### Pacman
+
