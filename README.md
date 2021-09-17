@@ -39,10 +39,13 @@
 ## Changes by Enrique
 
 ###### Snake
-
+- Show score
 
 ###### Cannon
 - Show score of hits
 
-###### Pacman
+###### Memory
+- Two game modes 
+- 4x4 grid 
+- Menu for game modes
 
