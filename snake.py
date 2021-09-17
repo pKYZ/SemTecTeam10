@@ -31,10 +31,11 @@ def move():
    head = snake[-1].copy()
    head.move(aim)
 
-   if not inside(head) or head in snake:
-       square(head.x, head.y, 10, 'red')
-       update()
-       return
+    if not inside(head) or head in snake:
+        square(head.x, head.y, 9, 'red')
+        print('You are dead :(')
+        update()
+        return
 
    snake.append(head)
 
