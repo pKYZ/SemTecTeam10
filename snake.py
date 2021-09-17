@@ -119,7 +119,7 @@ for i in range(25):
     right(15)
     forward(10)
 
-right(-105)
+right(-60)
 hideturtle()
 tracer(False)
 listen()
